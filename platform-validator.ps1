@@ -1,4 +1,4 @@
-﻿param(
+param(
     [ValidateSet("validate","patch","heal","full")]
     [string]$Mode = "full"
 )

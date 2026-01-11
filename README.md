@@ -1,61 +1,36 @@
-# Project Name
+# Infinity Platform Validator
 
-A brief description of what this project does.
+This repository contains the `platform-validator.ps1` PowerShell script, designed to validate the Infinity XOS platform. It includes functionalities for validating Python code, patching health endpoints for FastAPI applications, and healing missing directory structures.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
-
-## Installation
-
-```bash
-npm install
-# or
-yarn install
-# or
-pip install -r requirements.txt
-```
+- **Python Code Validation**: Checks Python files for compilation errors.
+- **FastAPI Health Endpoint Patching**: Automatically adds `/health` and `/ready` endpoints to FastAPI applications if they are missing.
+- **Directory Healing**: Creates essential directory structures like `services`, `services/agents`, `services/memory`, `.github`, and `.github/workflows` if they do not exist.
 
 ## Usage
 
-```bash
-npm start
-# or
-python main.py
+The script can be run with different modes:
+
+```powershell
+./platform-validator.ps1 -Mode validate
+./platform-validator.ps1 -Mode patch
+./platform-validator.ps1 -Mode heal
+./platform-validator.ps1 -Mode full
 ```
+
+- `validate`: Only performs Python code validation.
+- `patch`: Only patches FastAPI health endpoints.
+- `heal`: Only heals missing directory structures.
+- `full`: Performs all validation, patching, and healing operations.
 
 ## Development
 
 ### Prerequisites
 
-- Node.js 18+
-- Python 3.8+
-- etc.
-
-### Setup
-
-1. Clone the repository
-2. Install dependencies
-3. Run tests
-
-```bash
-npm test
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests
-5. Submit a pull request
+- PowerShell
+- Python 3.x (for Python code validation)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions or support, please open an issue on GitHub.
